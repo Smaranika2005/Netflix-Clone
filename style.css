@@ -1,0 +1,569 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('images/banner.jpg') center/cover no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 50px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.sign-in {
+  background-color: #e50914;
+  color: white;
+  padding:8px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: 30%;
+  padding: 0 20px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight:800;
+  margin-bottom: 20px;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  
+}
+
+.email-form input {
+  caret-color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight:600;
+  width: 350px;
+  border: 1px solid white;
+  border-radius: 5px;
+  line-height: 1.5;
+  padding: 1rem 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.email-form button {
+  width:225px;
+  background-color: #e50914;
+  color: white;
+  font-size: 1.5rem;
+  font-weight:600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Language Dropdown */
+.language-select {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 12px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.language-select option {
+  background: black;
+  color: white;
+}
+.trending-section {
+  background: #000;
+  padding: 40px 50px;
+}
+
+.trending-section h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.trending-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.trending-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.trending-card img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.trending-card:hover {
+  transform: scale(1.05);
+}
+
+.rank {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 6rem;
+  font-weight: 900;
+  color: black;
+  -webkit-text-stroke: 2px white; /* Adds white outline */
+  font-family: 'Arial Black', sans-serif;
+  z-index: 2;
+}
+/* --------------------------------------
+   📱 Media Queries: Responsive Design
+-----------------------------------------*/
+
+/* Devices up to 600px wide (Phones) */
+@media (max-width: 600px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content h2 {
+    font-size: 1.2rem;
+  }
+
+  .email-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .email-form input {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .email-form button {
+    font-size: 1.2rem;
+    width: 90%;
+    max-width: 300px;
+    height: 50px;
+    font-weight: 500;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .trending-section {
+    padding: 20px;
+  }
+
+  .trending-row {
+    gap: 20px;
+  }
+
+  .trending-card {
+    width: 120px;
+  }
+
+  .rank {
+    font-size: 2rem;
+  }
+}
+
+/* Devices between 601px and 1024px (Tablets + Small Laptops) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content h2 {
+    font-size: 1.4rem;
+  }
+
+  .email-form input {
+    width: 300px;
+  }
+
+  .email-form button {
+    width: 200px;
+    font-size: 1.3rem;
+  }
+
+  .trending-card {
+    width: 140px;
+  }
+}
+/* --------------------------------------
+   🔁 Landscape Tablets (768px – 1024px)
+-----------------------------------------*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .content h2 {
+    font-size: 1.3rem;
+  }
+
+  .email-form input,
+  .email-form button {
+    width: 300px;
+  }
+
+  header {
+    padding: 10px 40px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .trending-card {
+    width: 130px;
+  }
+
+  .rank {
+    font-size: 2.2rem;
+  }
+}
+/* --------------------------------------
+   🎨 Custom Scrollbar for Trending Row
+-----------------------------------------*/
+.trending-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.trending-row::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.trending-row::-webkit-scrollbar-thumb {
+  background-color: #e50914;
+  border-radius: 10px;
+}
+
+.trending-row::-webkit-scrollbar-thumb:hover {
+  background-color: #ff1b2e;
+}
+.reasons-section {
+  padding: 60px 50px;
+  background-color: #000;
+}
+
+.reasons-section h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.reasons-grid {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.reason-card {
+  flex: 1 1 220px;
+  background: linear-gradient(135deg, #1b0e2d, #1b0f23);
+  color: white;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 320px;
+  max-width: 320px;
+  box-shadow: 0 0 10px rgba(255, 0, 60, 0.15);
+  position: relative;
+}
+
+.reason-card h3 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.reason-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.reason-card img {
+  width: 90px;
+  align-self: flex-end;
+  margin-top: auto;
+}
+.faq-section {
+  padding: 60px 50px;
+  background-color: #000;
+  color: white;
+}
+
+.faq-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.faq-section details {
+  background-color: #2d2d2d;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq-section summary {
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+  list-style: none;
+}
+
+.faq-section summary::after {
+  content: "+";
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.faq-section details[open] summary::after {
+  content: "−"; /* minus symbol */
+}
+
+.faq-section details p {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.content-1 {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: 30%;
+  padding: 0 20px;
+}
+
+.prefooter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  
+}
+
+.prefooter input {
+  caret-color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight:600;
+  width: 500px;
+  border: 1px solid white;
+  border-radius: 5px;
+  line-height: 1.5;
+  padding: 1rem 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prefooter button {
+  width:225px;
+  background-color: #e50914;
+  color: white;
+  font-size: 1.5rem;
+  font-weight:600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.footer {
+  background-color: #000;
+  color: #aaa;
+  padding: 50px;
+  font-size: 0.9rem;
+}
+
+.footer-top {
+  margin-bottom: 20px;
+}
+
+.footer-top a {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+  min-width: 180px;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #aaa;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-language {
+  background: #000;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  width: fit-content;
+  border-radius: 3px;
+}
+
+.footer .region,
+.footer .note {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.footer .note a {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+/*Responsive*/
+
+@media (max-width: 768px) {
+    .reasons-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reason-card {
+    max-width: 90%;
+    width: 100%;
+  }
+  .faq-section {
+    padding: 40px 20px;
+  }
+
+  .faq-section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .faq-section details {
+    padding: 15px;
+  }
+
+  .faq-section summary {
+    font-size: 1rem;
+  }
+
+  .faq-section summary::after {
+    font-size: 1.5rem;
+  }
+
+  .faq-section details p {
+    font-size: 0.95rem;
+  }
+  .prefooter button {
+    font-size: 1.2rem;
+    width: 90%;
+    max-width: 300px;
+    height: 50px;
+    font-weight: 500;
+  }
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-links ul {
+    margin: 15px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
